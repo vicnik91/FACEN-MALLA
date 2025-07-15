@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Curricular Interactiva – Economía UNAP</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
+    h1 { text-align: center; }
+    h2 { margin-top: 40px; background: #ddd; padding: 10px; border-radius: 6px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { border: 1px solid #999; padding: 8px; text-align: left; }
+    th { background: #eee; }
+    .fucsia { background-color: #f7a1d5; }
+    .rosado { background-color: #ffc0cb; }
+    .morado { background-color: #c38ec7; }
+    .lila { background-color: #d8b7dd; }
+    .tachado { text-decoration: line-through; opacity: 0.5; }
+    select { width: 100%; }
+  </style>
+</head>
+<body>
+
+<h1>Malla Curricular Interactiva – Economía UNAP</h1>
+<div id="tabla"></div>
+
+<h2>Créditos por Ciclo</h2>
+<ul id="conteo-creditos"></ul>
+
+<script>
+  const malla = {
+    "Ciclo 1": [
+      { nombre: "MATEMÁTICA", creditos: 4.0, tipo: "fucsia" },
+      { nombre: "DERECHO CONSTITUCIONAL Y DERECHOS HUMANOS", creditos: 3.0, tipo: "rosado" },
+      { nombre: "NATACIÓN", creditos: 1.0, tipo: "lila" },
+      { nombre: "FUNDAMENTOS DE ADMINISTRACIÓN", creditos: 3.0, tipo: "rosado" },
+      { nombre: "LENGUAJE, REDACCIÓN Y ORATORIA", creditos: 4.0, tipo: "rosado" },
+      { nombre: "FILOSOFÍA", creditos: 3.0, tipo: "rosado" },
+      { nombre: "VOLEIBOL", creditos: 1.0, tipo: "lila" },
+      { nombre: "CREATIVIDAD E INNOVACIÓN EMPRESARIAL", creditos: 3.0, tipo: "rosado" },
+      { nombre: "GIMNASIA", creditos: 1.0, tipo: "lila" },
+      { nombre: "INGLÉS BÁSICO I", creditos: 2.0, tipo: "rosado" },
+      { nombre: "FÚTBOL", creditos: 1.0, tipo: "lila" }
+    ],
+    "Ciclo 2": [
+      { nombre: "TEATRO", creditos: 1.0, tipo: "lila" },
+      { nombre: "MATEMÁTICA II", creditos: 4.0, tipo: "fucsia" },
+      { nombre: "ORATORIA", creditos: 1.0, tipo: "lila" },
+      { nombre: "FUNDAMENTOS DE CONTABILIDAD", creditos: 3.0, tipo: "rosado" },
+      { nombre: "FUNDAMENTOS DE ECONOMÍA", creditos: 3.0, tipo: "rosado" },
+      { nombre: "PRIMEROS AUXILIOS", creditos: 1.0, tipo: "lila" },
+      { nombre: "BÁSQUETBOL", creditos: 1.0, tipo: "lila" },
+      { nombre: "FOLKLORE", creditos: 1.0, tipo: "lila" },
+      { nombre: "INGLÉS BÁSICO II", creditos: 2.0, tipo: "rosado" },
+      { nombre: "DEFENSA PERSONAL", creditos: 1.0, tipo: "lila" },
+      { nombre: "REALIDAD NACIONAL Y DESARROLLO REGIONAL AMAZÓNICO", creditos: 4.0, tipo: "rosado" },
+      { nombre: "ATLETISMO", creditos: 1.0, tipo: "lila" },
+      { nombre: "DANZAS", creditos: 1.0, tipo: "lila" },
+      { nombre: "METODOLOGÍA DE LA INVESTIGACIÓN CIENTÍFICA", creditos: 3.0, tipo: "rosado" }
+    ],
+    "Ciclo 3": [
+      { nombre: "MICROECONOMÍA", creditos: 4.0, tipo: "fucsia" },
+      { nombre: "MATEMÁTICA III", creditos: 4.0, tipo: "fucsia" },
+      { nombre: "ESTADÍSTICA I", creditos: 4.0, tipo: "fucsia" },
+      { nombre: "COSTO Y PRESUPUESTO EMPRESARIAL", creditos: 3.0, tipo: "rosado" },
+      { nombre: "DOCTRINAS ECONÓMICAS", creditos: 3.0, tipo: "rosado" },
+      { nombre: "HISTORIA ECONÓMICA DEL PERÚ", creditos: 3.0, tipo: "rosado" }
+    ],
+    "Ciclo 4": [
+      { nombre: "SOCIOLOGÍA", creditos: 2.0, tipo: "rosado" },
+      { nombre: "CONTABILIDAD GERENCIAL", creditos: 3.0, tipo: "rosado" },
+      { nombre: "ESTADÍSTICA II", creditos: 4.0, tipo: "fucsia" },
+      { nombre: "MATEMÁTICA FINANCIERA", creditos: 4.0, tipo: "fucsia" },
+      { nombre: "ANÁLISIS MICROECONÓMICO", creditos: 4.0, tipo: "fucsia" },
+      { nombre: "MATEMÁTICA IV", creditos: 4.0, tipo: "fucsia" }
+    ],
+    "Ciclo 5": [
+      { nombre: "ANÁLISIS Y GESTIÓN DE RIESGO", creditos: 3.0, tipo: "rosado" },
+      { nombre: "TEORÍA DE LA REGULACIÓN ECONÓMICA", creditos: 4.0, tipo: "fucsia" },
+      { nombre: "PROGRAMAS INFORMÁTICOS PARA LA ECONOMÍA", creditos: 4.0, tipo: "rosado" },
+      { nombre: "ECONOMÍA DE RECURSOS NATURALES Y MEDIO AMBIENTE", creditos: 4.0, tipo: "rosado" },
+      { nombre: "RESPONSABILIDAD SOCIAL", creditos: 2.0, tipo: "rosado" },
+      { nombre: "MACROECONOMÍA", creditos: 4.0, tipo: "fucsia" }
+    ],
+    "Ciclo 6": [
+      { nombre: "ANÁLISIS MACROECONÓMICO", creditos: 4.0, tipo: "fucsia" },
+      { nombre: "ECONOMÍA DEL CAPITAL HUMANO Y DEL EMPLEO", creditos: 3.0, tipo: "rosado" },
+      { nombre: "DEONTOLOGÍA PROFESIONAL", creditos: 3.0, tipo: "rosado" },
+      { nombre: "OPTIMIZACIÓN ECONÓMICA", creditos: 4.0, tipo: "fucsia" },
+      { nombre: "INVESTIGACIÓN DE MERCADOS", creditos: 4.0, tipo: "rosado" },
+      { nombre: "ECONOMETRÍA I", creditos: 4.0, tipo: "fucsia" }
+    ],
+    "Ciclo 7": [
+      { nombre: "ECONOMÍA FINANCIERA", creditos: 4.0, tipo: "rosado" },
+      { nombre: "FINANZAS CORPORATIVAS", creditos: 3.0, tipo: "rosado" },
+      { nombre: "TEORÍA MONETARIA", creditos: 4.0, tipo: "fucsia" },
+      { nombre: "ECONOMETRÍA II", creditos: 4.0, tipo: "fucsia" },
+      { nombre: "SEMINARIO DE CUENTAS NACIONALES", creditos: 3.0, tipo: "rosado" },
+      { nombre: "FORMULACIÓN Y EVALUACIÓN DE PROYECTOS I", creditos: 4.0, tipo: "rosado" },
+      { nombre: "DERECHO ECONÓMICO", creditos: 3.0, tipo: "rosado" }
+    ],
+    "Ciclo 8": [
+      { nombre: "PLANIFICACIÓN ESTRATÉGICA", creditos: 4.0, tipo: "rosado" },
+      { nombre: "MACROECONOMÍA DINÁMICA", creditos: 4.0, tipo: "fucsia" },
+      { nombre: "FINANZAS PÚBLICAS", creditos: 3.0, tipo: "rosado" },
+      { nombre: "TEORÍA DEL CRECIMIENTO Y DESARROLLO", creditos: 4.0, tipo: "fucsia" },
+      { nombre: "SEMINARIO DE BANCA Y DE SEGUROS", creditos: 3.0, tipo: "rosado" },
+      { nombre: "FORMULACIÓN Y EVALUACIÓN DE PROYECTOS II", creditos: 4.0, tipo: "rosado" },
+      { nombre: "TÓPICOS DE ECONOMETRÍA", creditos: 3.0, tipo: "fucsia" }
+    ],
+    "Ciclo 9": [
+      { nombre: "SEMINARIO DE ECONOMÍA TRIBUTARIA", creditos: 3.0, tipo: "rosado" },
+      { nombre: "COMERCIO INTERNACIONAL", creditos: 4.0, tipo: "rosado" },
+      { nombre: "SEMINARIO DE TENDENCIAS Y PERSPECTIVAS ECONÓMICAS", creditos: 2.0, tipo: "rosado" },
+      { nombre: "SEMINARIO DE DEMOGRAFÍA Y REALIDAD SOCIOECONÓMICA", creditos: 3.0, tipo: "rosado" },
+      { nombre: "SEMINARIO DE TESIS", creditos: 4.0, tipo: "rosado" },
+      { nombre: "POLÍTICA ECONÓMICA", creditos: 4.0, tipo: "rosado" }
+    ],
+    "Ciclo 10": [
+      { nombre: "TRABAJO DE INVESTIGACIÓN", creditos: 5.0, tipo: "rosado" },
+      { nombre: "ECONOMÍA REGIONAL", creditos: 3.0, tipo: "rosado" },
+      { nombre: "PRÁCTICA PRE PROFESIONAL", creditos: 5.0, tipo: "rosado" },
+      { nombre: "ECONOMÍA Y GESTIÓN PÚBLICA", creditos: 4.0, tipo: "rosado" }
+    ]
+  };
+
+  const tabla = document.getElementById('tabla');
+  const conteo = document.getElementById('conteo-creditos');
+
+  for (const ciclo in malla) {
+    const cursos = malla[ciclo];
+    let totalCreditos = 0;
+
+    let html = `
+      <h2>${ciclo}</h2>
+      <table>
+        <thead>
+          <tr><th>Curso</th><th>Créditos</th><th>Tipo</th></tr>
+        </thead>
+        <tbody>
+    `;
+
+    cursos.forEach((curso, i) => {
+      totalCreditos += curso.creditos;
+      html += `
+        <tr class="${curso.tipo}">
+          <td onclick="this.classList.toggle('tachado')">${curso.nombre}</td>
+          <td>${curso.creditos}</td>
+          <td>
+            <select onchange="colorCurso(this, this.closest('tr'))">
+              <option value="">---</option>
+              <option value="fucsia">Cadena</option>
+              <option value="rosado">No cadena</option>
+              <option value="morado">Jalado</option>
+              <option value="lila">Extracurricular</option>
+            </select>
+          </td>
+        </tr>
+      `;
+    });
+
+    html += `</tbody></table>`;
+    tabla.innerHTML += html;
+    conteo.innerHTML += `<li><strong>${ciclo}:</strong> ${totalCreditos} créditos</li>`;
+  }
+
+  function colorCurso(select, fila) {
+    fila.className = select.value;
+  }
+</script>
+
+</body>
+</html>
