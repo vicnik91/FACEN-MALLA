@@ -29,97 +29,97 @@
 <script>
   const malla = {
     "Ciclo 1": [
-      { nombre: "MATEMÁTICA", creditos: 4.0, tipo: "fucsia" },
-      { nombre: "DERECHO CONSTITUCIONAL Y DERECHOS HUMANOS", creditos: 3.0, tipo: "rosado" },
-      { nombre: "NATACIÓN", creditos: 1.0, tipo: "lila" },
-      { nombre: "FUNDAMENTOS DE ADMINISTRACIÓN", creditos: 3.0, tipo: "rosado" },
-      { nombre: "LENGUAJE, REDACCIÓN Y ORATORIA", creditos: 4.0, tipo: "rosado" },
-      { nombre: "FILOSOFÍA", creditos: 3.0, tipo: "rosado" },
-      { nombre: "VOLEIBOL", creditos: 1.0, tipo: "lila" },
-      { nombre: "CREATIVIDAD E INNOVACIÓN EMPRESARIAL", creditos: 3.0, tipo: "rosado" },
-      { nombre: "GIMNASIA", creditos: 1.0, tipo: "lila" },
-      { nombre: "INGLÉS BÁSICO I", creditos: 2.0, tipo: "rosado" },
-      { nombre: "FÚTBOL", creditos: 1.0, tipo: "lila" }
+      { nombre: "MATEMÁTICA", creditos: 4.0, tipo: "fucsia", prerequisito: "(prelación pendiente)" },
+      { nombre: "DERECHO CONSTITUCIONAL Y DERECHOS HUMANOS", creditos: 3.0, tipo: "rosado", prerequisito: "(prelación pendiente)" },
+      { nombre: "NATACIÓN", creditos: 1.0, tipo: "lila", prerequisito: "(prelación pendiente)" },
+      { nombre: "FUNDAMENTOS DE ADMINISTRACIÓN", creditos: 3.0, tipo: "rosado", prerequisito: "(prelación pendiente)" },
+      { nombre: "LENGUAJE, REDACCIÓN Y ORATORIA", creditos: 4.0, tipo: "rosado", prerequisito: "(prelación pendiente)" },
+      { nombre: "FILOSOFÍA", creditos: 3.0, tipo: "rosado", prerequisito: "(prelación pendiente)" },
+      { nombre: "VOLEIBOL", creditos: 1.0, tipo: "lila", prerequisito: "(prelación pendiente)" },
+      { nombre: "CREATIVIDAD E INNOVACIÓN EMPRESARIAL", creditos: 3.0, tipo: "rosado", prerequisito: "(prelación pendiente)" },
+      { nombre: "GIMNASIA", creditos: 1.0, tipo: "lila", prerequisito: "(prelación pendiente)" },
+      { nombre: "INGLÉS BÁSICO I", creditos: 2.0, tipo: "rosado", prerequisito: "(prelación pendiente)" },
+      { nombre: "FÚTBOL", creditos: 1.0, tipo: "lila", prerequisito: "(prelación pendiente)" }
     ],
     "Ciclo 2": [
-      { nombre: "TEATRO", creditos: 1.0, tipo: "lila" },
-      { nombre: "MATEMÁTICA II", creditos: 4.0, tipo: "fucsia" },
-      { nombre: "ORATORIA", creditos: 1.0, tipo: "lila" },
-      { nombre: "FUNDAMENTOS DE CONTABILIDAD", creditos: 3.0, tipo: "rosado" },
-      { nombre: "FUNDAMENTOS DE ECONOMÍA", creditos: 3.0, tipo: "rosado" },
-      { nombre: "PRIMEROS AUXILIOS", creditos: 1.0, tipo: "lila" },
-      { nombre: "BÁSQUETBOL", creditos: 1.0, tipo: "lila" },
-      { nombre: "FOLKLORE", creditos: 1.0, tipo: "lila" },
-      { nombre: "INGLÉS BÁSICO II", creditos: 2.0, tipo: "rosado" },
-      { nombre: "DEFENSA PERSONAL", creditos: 1.0, tipo: "lila" },
-      { nombre: "REALIDAD NACIONAL Y DESARROLLO REGIONAL AMAZÓNICO", creditos: 4.0, tipo: "rosado" },
-      { nombre: "ATLETISMO", creditos: 1.0, tipo: "lila" },
-      { nombre: "DANZAS", creditos: 1.0, tipo: "lila" },
-      { nombre: "METODOLOGÍA DE LA INVESTIGACIÓN CIENTÍFICA", creditos: 3.0, tipo: "rosado" }
+      { nombre: "TEATRO", creditos: 1.0, tipo: "lila", prerequisito: "(prelación pendiente)" },
+      { nombre: "MATEMÁTICA II", creditos: 4.0, tipo: "fucsia", prerequisito: "MATEMÁTICA" },
+      { nombre: "ORATORIA", creditos: 1.0, tipo: "lila", prerequisito: "(prelación pendiente)" },
+      { nombre: "FUNDAMENTOS DE CONTABILIDAD", creditos: 3.0, tipo: "rosado", prerequisito: "(prelación pendiente)" },
+      { nombre: "FUNDAMENTOS DE ECONOMÍA", creditos: 3.0, tipo: "rosado", prerequisito: "(prelación pendiente)" },
+      { nombre: "PRIMEROS AUXILIOS", creditos: 1.0, tipo: "lila", prerequisito: "(prelación pendiente)" },
+      { nombre: "BÁSQUETBOL", creditos: 1.0, tipo: "lila", prerequisito: "(prelación pendiente)" },
+      { nombre: "FOLKLORE", creditos: 1.0, tipo: "lila", prerequisito: "(prelación pendiente)" },
+      { nombre: "INGLÉS BÁSICO II", creditos: 2.0, tipo: "rosado", prerequisito: "INGLÉS BÁSICO I" },
+      { nombre: "DEFENSA PERSONAL", creditos: 1.0, tipo: "lila", prerequisito: "(prelación pendiente)" },
+      { nombre: "REALIDAD NACIONAL Y DESARROLLO REGIONAL AMAZÓNICO", creditos: 4.0, tipo: "rosado", prerequisito: "(prelación pendiente)" },
+      { nombre: "ATLETISMO", creditos: 1.0, tipo: "lila", prerequisito: "(prelación pendiente)" },
+      { nombre: "DANZAS", creditos: 1.0, tipo: "lila", prerequisito: "(prelación pendiente)" },
+      { nombre: "METODOLOGÍA DE LA INVESTIGACIÓN CIENTÍFICA", creditos: 3.0, tipo: "rosado", prerequisito: "(prelación pendiente)" }
     ],
     "Ciclo 3": [
-      { nombre: "MICROECONOMÍA", creditos: 4.0, tipo: "fucsia" },
-      { nombre: "MATEMÁTICA III", creditos: 4.0, tipo: "fucsia" },
-      { nombre: "ESTADÍSTICA I", creditos: 4.0, tipo: "fucsia" },
-      { nombre: "COSTO Y PRESUPUESTO EMPRESARIAL", creditos: 3.0, tipo: "rosado" },
-      { nombre: "DOCTRINAS ECONÓMICAS", creditos: 3.0, tipo: "rosado" },
-      { nombre: "HISTORIA ECONÓMICA DEL PERÚ", creditos: 3.0, tipo: "rosado" }
+      { nombre: "MICROECONOMÍA", creditos: 4.0, tipo: "fucsia", prerequisito: "FUNDAMENTOS DE ECONOMÍA" },
+      { nombre: "MATEMÁTICA III", creditos: 4.0, tipo: "fucsia", prerequisito: "MATEMÁTICA II" },
+      { nombre: "ESTADÍSTICA I", creditos: 4.0, tipo: "fucsia", prerequisito: "MATEMÁTICA II" },
+      { nombre: "COSTO Y PRESUPUESTO EMPRESARIAL", creditos: 3.0, tipo: "rosado", prerequisito: "FUNDAMENTOS DE CONTABILIDAD" },
+      { nombre: "DOCTRINAS ECONÓMICAS", creditos: 3.0, tipo: "rosado", prerequisito: "FUNDAMENTOS DE ECONOMÍA" },
+      { nombre: "HISTORIA ECONÓMICA DEL PERÚ", creditos: 3.0, tipo: "rosado", prerequisito: "(prelación pendiente)" }
     ],
     "Ciclo 4": [
-      { nombre: "SOCIOLOGÍA", creditos: 2.0, tipo: "rosado" },
-      { nombre: "CONTABILIDAD GERENCIAL", creditos: 3.0, tipo: "rosado" },
-      { nombre: "ESTADÍSTICA II", creditos: 4.0, tipo: "fucsia" },
-      { nombre: "MATEMÁTICA FINANCIERA", creditos: 4.0, tipo: "fucsia" },
-      { nombre: "ANÁLISIS MICROECONÓMICO", creditos: 4.0, tipo: "fucsia" },
-      { nombre: "MATEMÁTICA IV", creditos: 4.0, tipo: "fucsia" }
+      { nombre: "SOCIOLOGÍA", creditos: 2.0, tipo: "rosado", prerequisito: "FILOSOFÍA" },
+      { nombre: "CONTABILIDAD GERENCIAL", creditos: 3.0, tipo: "rosado", prerequisito: "COSTO Y PRESUPUESTO EMPRESARIAL" },
+      { nombre: "ESTADÍSTICA II", creditos: 4.0, tipo: "fucsia", prerequisito: "ESTADÍSTICA I" },
+      { nombre: "MATEMÁTICA FINANCIERA", creditos: 4.0, tipo: "fucsia", prerequisito: "MATEMÁTICA II" },
+      { nombre: "ANÁLISIS MICROECONÓMICO", creditos: 4.0, tipo: "fucsia", prerequisito: "MICROECONOMÍA" },
+      { nombre: "MATEMÁTICA IV", creditos: 4.0, tipo: "fucsia", prerequisito: "MATEMÁTICA III" }
     ],
     "Ciclo 5": [
-      { nombre: "ANÁLISIS Y GESTIÓN DE RIESGO", creditos: 3.0, tipo: "rosado" },
-      { nombre: "TEORÍA DE LA REGULACIÓN ECONÓMICA", creditos: 4.0, tipo: "fucsia" },
-      { nombre: "PROGRAMAS INFORMÁTICOS PARA LA ECONOMÍA", creditos: 4.0, tipo: "rosado" },
-      { nombre: "ECONOMÍA DE RECURSOS NATURALES Y MEDIO AMBIENTE", creditos: 4.0, tipo: "rosado" },
-      { nombre: "RESPONSABILIDAD SOCIAL", creditos: 2.0, tipo: "rosado" },
-      { nombre: "MACROECONOMÍA", creditos: 4.0, tipo: "fucsia" }
+      { nombre: "ANÁLISIS Y GESTIÓN DE RIESGO", creditos: 3.0, tipo: "rosado", prerequisito: "MATEMÁTICA IV" },
+      { nombre: "TEORÍA DE LA REGULACIÓN ECONÓMICA", creditos: 4.0, tipo: "fucsia", prerequisito: "ANÁLISIS MICROECONÓMICO" },
+      { nombre: "PROGRAMAS INFORMÁTICOS PARA LA ECONOMÍA", creditos: 4.0, tipo: "rosado", prerequisito: "ESTADÍSTICA II" },
+      { nombre: "ECONOMÍA DE RECURSOS NATURALES Y MEDIO AMBIENTE", creditos: 4.0, tipo: "rosado", prerequisito: "ANÁLISIS MICROECONÓMICO" },
+      { nombre: "RESPONSABILIDAD SOCIAL", creditos: 2.0, tipo: "rosado", prerequisito: "(prelación pendiente)" },
+      { nombre: "MACROECONOMÍA", creditos: 4.0, tipo: "fucsia", prerequisito: "FUNDAMENTOS DE ECONOMÍA" }
     ],
     "Ciclo 6": [
-      { nombre: "ANÁLISIS MACROECONÓMICO", creditos: 4.0, tipo: "fucsia" },
-      { nombre: "ECONOMÍA DEL CAPITAL HUMANO Y DEL EMPLEO", creditos: 3.0, tipo: "rosado" },
-      { nombre: "DEONTOLOGÍA PROFESIONAL", creditos: 3.0, tipo: "rosado" },
-      { nombre: "OPTIMIZACIÓN ECONÓMICA", creditos: 4.0, tipo: "fucsia" },
-      { nombre: "INVESTIGACIÓN DE MERCADOS", creditos: 4.0, tipo: "rosado" },
-      { nombre: "ECONOMETRÍA I", creditos: 4.0, tipo: "fucsia" }
+      { nombre: "ANÁLISIS MACROECONÓMICO", creditos: 4.0, tipo: "fucsia", prerequisito: "MACROECONOMÍA" },
+      { nombre: "ECONOMÍA DEL CAPITAL HUMANO Y DEL EMPLEO", creditos: 3.0, tipo: "rosado", prerequisito: "MACROECONOMÍA" },
+      { nombre: "DEONTOLOGÍA PROFESIONAL", creditos: 3.0, tipo: "rosado", prerequisito: "(prelación pendiente)" },
+      { nombre: "OPTIMIZACIÓN ECONÓMICA", creditos: 4.0, tipo: "fucsia", prerequisito: "MATEMÁTICA IV" },
+      { nombre: "INVESTIGACIÓN DE MERCADOS", creditos: 4.0, tipo: "rosado", prerequisito: "PROGRAMAS INFORMÁTICOS PARA LA ECONOMÍA" },
+      { nombre: "ECONOMETRÍA I", creditos: 4.0, tipo: "fucsia", prerequisito: "ESTADÍSTICA II" }
     ],
     "Ciclo 7": [
-      { nombre: "ECONOMÍA FINANCIERA", creditos: 4.0, tipo: "rosado" },
-      { nombre: "FINANZAS CORPORATIVAS", creditos: 3.0, tipo: "rosado" },
-      { nombre: "TEORÍA MONETARIA", creditos: 4.0, tipo: "fucsia" },
-      { nombre: "ECONOMETRÍA II", creditos: 4.0, tipo: "fucsia" },
-      { nombre: "SEMINARIO DE CUENTAS NACIONALES", creditos: 3.0, tipo: "rosado" },
-      { nombre: "FORMULACIÓN Y EVALUACIÓN DE PROYECTOS I", creditos: 4.0, tipo: "rosado" },
-      { nombre: "DERECHO ECONÓMICO", creditos: 3.0, tipo: "rosado" }
+      { nombre: "ECONOMÍA FINANCIERA", creditos: 4.0, tipo: "rosado", prerequisito: "CONTABILIDAD GERENCIAL" },
+      { nombre: "FINANZAS CORPORATIVAS", creditos: 3.0, tipo: "rosado", prerequisito: "ANÁLISIS Y GESTIÓN DE RIESGO" },
+      { nombre: "TEORÍA MONETARIA", creditos: 4.0, tipo: "fucsia", prerequisito: "ANÁLISIS MACROECONÓMICO" },
+      { nombre: "ECONOMETRÍA II", creditos: 4.0, tipo: "fucsia", prerequisito: "ECONOMETRÍA I" },
+      { nombre: "SEMINARIO DE CUENTAS NACIONALES", creditos: 3.0, tipo: "rosado", prerequisito: "MACROECONOMÍA" },
+      { nombre: "FORMULACIÓN Y EVALUACIÓN DE PROYECTOS I", creditos: 4.0, tipo: "rosado", prerequisito: "INVESTIGACIÓN DE MERCADOS" },
+      { nombre: "DERECHO ECONÓMICO", creditos: 3.0, tipo: "rosado", prerequisito: "DERECHO CONSTITUCIONAL Y DERECHOS HUMANOS" }
     ],
     "Ciclo 8": [
-      { nombre: "PLANIFICACIÓN ESTRATÉGICA", creditos: 4.0, tipo: "rosado" },
-      { nombre: "MACROECONOMÍA DINÁMICA", creditos: 4.0, tipo: "fucsia" },
-      { nombre: "FINANZAS PÚBLICAS", creditos: 3.0, tipo: "rosado" },
-      { nombre: "TEORÍA DEL CRECIMIENTO Y DESARROLLO", creditos: 4.0, tipo: "fucsia" },
-      { nombre: "SEMINARIO DE BANCA Y DE SEGUROS", creditos: 3.0, tipo: "rosado" },
-      { nombre: "FORMULACIÓN Y EVALUACIÓN DE PROYECTOS II", creditos: 4.0, tipo: "rosado" },
-      { nombre: "TÓPICOS DE ECONOMETRÍA", creditos: 3.0, tipo: "fucsia" }
+      { nombre: "PLANIFICACIÓN ESTRATÉGICA", creditos: 4.0, tipo: "rosado", prerequisito: "ANÁLISIS MACROECONÓMICO" },
+      { nombre: "MACROECONOMÍA DINÁMICA", creditos: 4.0, tipo: "fucsia", prerequisito: "OPTIMIZACIÓN ECONÓMICA" },
+      { nombre: "FINANZAS PÚBLICAS", creditos: 3.0, tipo: "rosado", prerequisito: "TEORÍA MONETARIA" },
+      { nombre: "TEORÍA DEL CRECIMIENTO Y DESARROLLO", creditos: 4.0, tipo: "fucsia", prerequisito: "ANÁLISIS MACROECONÓMICO" },
+      { nombre: "SEMINARIO DE BANCA Y DE SEGUROS", creditos: 3.0, tipo: "rosado", prerequisito: "ANÁLISIS Y GESTIÓN DE RIESGO" },
+      { nombre: "FORMULACIÓN Y EVALUACIÓN DE PROYECTOS II", creditos: 4.0, tipo: "rosado", prerequisito: "FORMULACIÓN Y EVALUACIÓN DE PROYECTOS I" },
+      { nombre: "TÓPICOS DE ECONOMETRÍA", creditos: 3.0, tipo: "fucsia", prerequisito: "ECONOMETRÍA II" }
     ],
     "Ciclo 9": [
-      { nombre: "SEMINARIO DE ECONOMÍA TRIBUTARIA", creditos: 3.0, tipo: "rosado" },
-      { nombre: "COMERCIO INTERNACIONAL", creditos: 4.0, tipo: "rosado" },
-      { nombre: "SEMINARIO DE TENDENCIAS Y PERSPECTIVAS ECONÓMICAS", creditos: 2.0, tipo: "rosado" },
-      { nombre: "SEMINARIO DE DEMOGRAFÍA Y REALIDAD SOCIOECONÓMICA", creditos: 3.0, tipo: "rosado" },
-      { nombre: "SEMINARIO DE TESIS", creditos: 4.0, tipo: "rosado" },
-      { nombre: "POLÍTICA ECONÓMICA", creditos: 4.0, tipo: "rosado" }
+      { nombre: "SEMINARIO DE ECONOMÍA TRIBUTARIA", creditos: 3.0, tipo: "rosado", prerequisito: "ECONOMÍA FINANCIERA" },
+      { nombre: "COMERCIO INTERNACIONAL", creditos: 4.0, tipo: "rosado", prerequisito: "ANÁLISIS MACROECONÓMICO" },
+      { nombre: "SEMINARIO DE TENDENCIAS Y PERSPECTIVAS ECONÓMICAS", creditos: 2.0, tipo: "rosado", prerequisito: "TEORÍA DEL CRECIMIENTO Y DESARROLLO" },
+      { nombre: "SEMINARIO DE DEMOGRAFÍA Y REALIDAD SOCIOECONÓMICA", creditos: 3.0, tipo: "rosado", prerequisito: "MACROECONOMÍA" },
+      { nombre: "SEMINARIO DE TESIS", creditos: 4.0, tipo: "rosado", prerequisito: "METODOLOGÍA DE LA INVESTIGACIÓN CIENTÍFICA" },
+      { nombre: "POLÍTICA ECONÓMICA", creditos: 4.0, tipo: "rosado", prerequisito: "PLANIFICACIÓN ESTRATÉGICA" }
     ],
     "Ciclo 10": [
-      { nombre: "TRABAJO DE INVESTIGACIÓN", creditos: 5.0, tipo: "rosado" },
-      { nombre: "ECONOMÍA REGIONAL", creditos: 3.0, tipo: "rosado" },
-      { nombre: "PRÁCTICA PRE PROFESIONAL", creditos: 5.0, tipo: "rosado" },
-      { nombre: "ECONOMÍA Y GESTIÓN PÚBLICA", creditos: 4.0, tipo: "rosado" }
+      { nombre: "TRABAJO DE INVESTIGACIÓN", creditos: 5.0, tipo: "rosado", prerequisito: "SEMINARIO DE TESIS" },
+      { nombre: "ECONOMÍA REGIONAL", creditos: 3.0, tipo: "rosado", prerequisito: "COMERCIO INTERNACIONAL" },
+      { nombre: "PRÁCTICA PRE PROFESIONAL", creditos: 5.0, tipo: "rosado", prerequisito: "(prelación pendiente)" },
+      { nombre: "ECONOMÍA Y GESTIÓN PÚBLICA", creditos: 4.0, tipo: "rosado", prerequisito: "POLÍTICA ECONÓMICA" }
     ]
   };
 
